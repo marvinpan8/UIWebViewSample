@@ -1,29 +1,186 @@
+<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-        <script language="javascript">
-            function loadURL(url) {
-                var iFrame;
-                iFrame = document.createElement("iframe");
-                iFrame.setAttribute("src", url);
-                iFrame.setAttribute("style", "display:none;");
-                iFrame.setAttribute("height", "0px");
-                iFrame.setAttribute("width", "0px");
-                iFrame.setAttribute("frameborder", "0");
-                document.body.appendChild(iFrame);
-                // 发起请求后这个iFrame就没用了，所以把它从dom上移除掉
-                iFrame.parentNode.removeChild(iFrame);
-                iFrame = null;
+<head>
+    <title>灵云智投</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="wap-font-scale" content="no">
+
+</head>
+
+<!--   CSS语法-->
+<style type='text/css'>
+    img {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <h2 style="text-align:center">欢迎光临</h2>
+
+    <!-- <div style="width: 400;">
+        <input type="text" id="secretid" style="width: 400;" />
+    </div>
+    <div>
+        <input type="text" id="signid" style="width: 400;" />
+    </div> -->
+
+    <!--       图片-->
+    <!--    <p style="text-align:center"> <img src="https://upload.jianshu.io/users/upload_avatars/1708447/fe2c67e7-25f7-4e2e-a321-a5d517c124aa.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240"  id= "pictureId" width="128" height="128" align="middle" onclick="clickImage();" /> </p>-->
+
+    <p style="text-align:center"> <img
+            src="https://image.baidu.com/search/down?tn=download&ipn=dwnl&word=download&ie=utf8&fr=result&url=http%3A%2F%2Fhiphotos.baidu.com%2Ffeed%2Fpic%2Fitem%2Fdbb44aed2e738bd46f89ac4aab8b87d6277ff925.jpg&thumburl=https%3A%2F%2Fss2.bdstatic.com%2F70cFvnSh_Q1YnxGkpoWK1HF6hhy%2Fit%2Fu%3D3646432506%2C1438930818%26fm%3D26%26gp%3D0.jpg"
+            id="pictureId" width="128" height="128" align="middle" onclick="clickImage();" /> </p>
+
+    <p style="text-align: center ;background-color: #e6b500"> 你的信任是我们最大的动力 </p>
+
+    <p style="text-align:center"> <a
+            href="https://sdp-dev.test.investoday.net/#/stockDiagnosis?StockCode=000001&AppId=001&AccountId=10123&ProdId=001&Right=0">个股诊断开发版</a>
+    </p>
+
+    <p style="text-align:center"> <a
+            href="https://sdp-dev.test.investoday.net/#/stockDiagnosis?StockCode=000001&AppId=001&AccountId=10123&ProdId=001&Right=0&ShowQuotes=1">个股诊断开发版JS</a>
+    </p>
+
+    <p style="text-align:center"> <a
+            href="https://sdp.test.investoday.net/#/stockDiagnosis?StockCode=000001&AppId=001&AccountId=10123&ProdId=001&Right=0">个股诊断演示版</a>
+    </p>
+
+    <p style="text-align:center"> <a
+            href="https://sdp.test.investoday.net/#/stockDiagnosis?StockCode=000001&AppId=001&AccountId=10123&ProdId=001&Right=0&ShowQuotes=1">个股诊断演示版JS</a>
+    </p>
+
+
+    <!--    <p style="text-align:center"> <a href="https://www.jianshu.com/u/e15d1f644bea">简书主页</a> </p>-->
+
+    <!--    <p style="text-align:center"> <a href="github://callName_?https://github.com/wsl2ls">Github主页</a> ：通过截获URL调用OC</p>-->
+
+    <p style="text-align:center"> <a href="http://www.chinadaily.com.cn">中国日报网 </a> </p>
+
+    <!--    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "jsToOcFunction1()" > JS调用OC：不带参数  </button> </p>-->
+    <!--    -->
+    <!--    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>-->
+    <!--    -->
+    <!--    <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>-->
+
+    <!--        音频-->
+    <p style="text-align:center">
+        <audio controls="controls" height="100" width="100">
+            <source
+                src="http://rm01.sycdn.kuwo.cn/6f41c2748635bc6bbcf288087091c149/5e6de06a/resource/n3/85/60/1866511993.mp3"
+                type="audio/mp3" />
+            <!--            <source src="http://up.mcyt.net/?down/47548.ogg" type="audio/ogg" />-->
+            <embed height="100" width="100"
+                src="http://rm01.sycdn.kuwo.cn/6f41c2748635bc6bbcf288087091c149/5e6de06a/resource/n3/85/60/1866511993.mp3" />
+        </audio>
+    </p>
+
+    <!--         视频-->
+    <p style="text-align:center"> <video width="320" height="240" controls="controls" preload="auto"
+            poster="http://a.hiphotos.baidu.com/zhidao/pic/item/0d338744ebf81a4cd90f1d3ad72a6059252da600.jpg">
+            <source src="http://baobab.kaiyanapp.com/api/v1/playUrl?vid=39183&editionType=normal&source=qcloud"
+                type="video/mp4" />
+            <source src="http://baobab.kaiyanapp.com/api/v1/playUrl?vid=39183&editionType=normal&source=qcloud"
+                type="video/ogg" />
+            <source src="http://baobab.wdjcdn.com/1455782903700jy" type="video/webm" />
+            <object data="http://baobab.kaiyanapp.com/api/v1/playUrl?vid=39183&editionType=normal&source=qcloud"
+                width="320" height="240">
+                <embed src="http://baobab.kaiyanapp.com/api/v1/playUrl?vid=39183&editionType=normal&source=qcloud"
+                    width="320" height="240" />
+            </object>
+        </video> </p>
+
+    <!--        JS语法-->
+    <script type="text/javascript">
+
+
+
+        function jsToOcFunction2() {
+            window.webkit.messageHandlers.jrtzSignature.postMessage({ "method": "JrtzIOSSignature.getSignature", "currentDateUTC": "2020-03-12", "product": "sdp-ret", "stringToSign": "fdasdfasdfasdfasdf" });
+        }
+
+        // function jsToOcFunction1(){
+        //    window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
+        // }
+
+        // function jsToOcFunction2(){
+        //     window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+        // }
+
+        function showAlert() {
+            // alert("被OC截获到了"); 
+        }
+
+        //图片点击事件
+        function clickImage() {
+            // alert("欢迎你关注我！点击了图片");
+        }
+
+        //OC调用JS改变背景色
+        function changeColor(parameter) {
+            document.body.style.backgroundColor = randomColor();
+            // alert(parameter); 
+        }
+
+        //随机生成颜色
+        function randomColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return "rgb(" + r + ',' + g + ',' + b + ")";//所有方法的拼接都可以用ES6新特性`其他字符串{$变量名}`替换
+        }
+
+        // 切换图片
+        function changePicture(id, path) {
+            var image = document.getElementById(id);
+            image.src = path;
+        }
+
+
+        function callOC(func, param) {
+            var iframe = document.createElement("iframe");
+            var url = "jrtz://" + func + "?";
+            for (var i in param) {
+                url = url + i + "=" + param[i] + "&";
+
             }
-            function check() {
-                loadURL("youdao:abc");
+            url = url.substr(0,url.length-1);
+            iframe.src = url;
+            iframe.style.display = 'none';
+            document.documentElement.appendChild(iframe);
+            // 发起请求后这个iFrame就没用了，所以把它从dom上移除掉
+            setTimeout(() => { document.documentElement.removeChild(iframe) }, 0);
+        }
+        function getSecretId() {
+            callOC("getSecretId");
+        }
+        function getTestSign() {
+            callOC('signature', { 'method': 'getTestSign', 'currentDateUTC': '2020-03-18', 'product': 'sdp-rest', 'stringToSign': 'fdasdfasdfasdfasdf' });
+        }
+
+        // if (!window.webkit) {
+        //     alert("不支持WKWebView");
+        // }
+        
+        window.JrtzIOSSignature = {
+            getSecretId: function (id) {
+                return document.getElementById("secretid").value = id, id;
+            },
+            getTestSign: function (sign) {
+                setTimeout(()=>document.getElementById("signid").value = sign)
             }
-        </script>
-    </head>
-    
-    <body>
-        <h1>这是一段内容</h1>
-        <input type="button" value="测试" onclick="check()" />
-    </body>
+        }
+
+        // getSecretId();
+        // getTestSign();
+
+    </script>
+
+</body>
+
 </html>
